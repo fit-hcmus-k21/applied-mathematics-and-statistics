@@ -23,7 +23,7 @@ def Gauss_elimination(A) :
                 c += 1
             if c == ncol:
                 break
-        # nếu cột đó không có phần tử khác 0 thì dừng
+        # nếu hàng đó không có phần tử khác 0 thì dừng
         if c == ncol:
             break
         # nếu phần tử đó khác 0 thì chia hết các phần tử cùng hàng cho nó
@@ -32,7 +32,6 @@ def Gauss_elimination(A) :
         for k in range(0, nrow):
             if k != r:
                 A[k] = A[k] - A[k][c] * A[r]
-
 
     return A
 
@@ -81,7 +80,7 @@ def back_substitution(A, fout) :
             if A[i][j] != 0:
                 count += 1
                 break
-    # số ẩn cần phải đặt tham số
+    # số ẩn cần phải đặt tham số tự do
     nPara = nVar - count
     # đặt ẩn tham số theo thứ tự a,b,c,...
     listPara = [chr(i) for i in range(97, 97 + nPara)]
@@ -109,22 +108,22 @@ def back_substitution(A, fout) :
                 listSolutions[i] += str(int(A[i][nc-1]) if int(A[i][nc-1]) == A[i][nc-1] else round(A[i][nc-1], 1))
             # duyệt qua các phần tử cùng hàng phía sau để trừ đi
             for j in range(i + 1, nc-1):
-                if A[i][j] != 0:
+                if A[i][j] != 0:    # x + by = d => x = d - by
                     if A[i][j] > 0:
                         listSolutions[i] += " - " 
-                        if int (A[i][j]) == 1 and A[i][j] == int(A[i][j]):
+                        if int (A[i][j]) == 1 and A[i][j] == int(A[i][j]):  # né trường hợp ghi ra - 1a
                             listSolutions[i] += ""
                         else:
                             listSolutions[i] += str(int(A[i][j]) if A[i][j] == int(A[i][j]) else round(A[i][j], 1))
                     else:
                         listSolutions[i] += " + "
-                        if int(A[i][j]) == -1 and A[i][j] == int(A[i][j]):
+                        if int(A[i][j]) == -1 and A[i][j] == int(A[i][j]):  # né trường hợp ghi ra + 1b
                             listSolutions[i] += ""
                         else:
                             listSolutions[i] += str(int(-1*A[i][j]) if A[i][j] == int(A[i][j]) else round(-1*A[i][j], 1)) 
-                    if len(listSolutions[j]) == 1:
+                    if len(listSolutions[j]) == 1:  # nếu nghiệm đang cần chèn vào chỉ có dạng a hoặc b ..
                         listSolutions[i] += listSolutions[j]
-                    else:
+                    else:   # nghiệm đang cần chèn có dạng x = 2a - 3c thì cần chèn trong () sau hệ số 
                         listSolutions[i] += "(" + listSolutions[j] + ")"
     # in ra dạng nghiệm của hệ phương trình
     fout.write("(")
