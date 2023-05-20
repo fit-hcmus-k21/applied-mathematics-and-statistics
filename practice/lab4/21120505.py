@@ -3,5 +3,3 @@ import numpy as np
 import sympy 
 from sympy import Matrix 
 from fractions import Fraction 
-
-print("Bài 1")
