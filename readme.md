@@ -3,3 +3,4 @@
 * [Giải hệ phương trình](./practice/lab1)
 * [Phân tích ma trận QR](./practice/lab2)
 * [Phân tích kì dị](./practice/lab3)
+* [Tối ưu lồi và phương pháp bình phương tối tiểu](./practice/lab4)
