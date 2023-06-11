@@ -2,8 +2,8 @@
 #### Bài tập : Luyện tập tối ưu lồi
 </br>
 
-### MSSV: 21120505
-### Họ tên: Bùi Thị Thanh Ngân
+### MSSV: 
+### Họ tên: 
 </br>
 
 #### Bài 1:
