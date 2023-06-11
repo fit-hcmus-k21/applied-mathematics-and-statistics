@@ -1,6 +1,7 @@
-#### [Tài liệu lý thuyết và bài tập](./docs) 
-#### Danh sách các bài lab thực hành:
-* [Giải hệ phương trình](./practice/lab1)
-* [Phân tích ma trận QR](./practice/lab2)
-* [Phân tích kì dị](./practice/lab3)
-* [Tối ưu lồi và phương pháp bình phương tối tiểu](./practice/lab4)
+#### [📚 Theory Resources](./docs) 
+#### List of lab exercises:
+* [Solving systems of equations](./practice/lab1)
+* [QR matrix decomposition](./practice/lab2)
+* [Anomaly detection](./practice/lab3)
+* [Convex optimization and least squares method](./practice/lab4)
+* [Gradient descent method and its application in Machine Learning | Recommendation System](./practice/lab.final)
